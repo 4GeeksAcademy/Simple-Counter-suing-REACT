@@ -15,12 +15,15 @@ const Home = () => {
   const digits = formattedCount.split("");
 
   return (
-        <div className="d-flex flex-row m-4 display-1 bg-dark text-white">
-            <i class="fa fa-clock fa-2xl myclock"></i>
-          <div className="d-flex flex-row mb-3 display-1">
+        <div className="container">
+            <div className="clock">
+              <i class="fa fa-clock fa-2xl myclock"></i>
+            </div>
+          <div className="numbers">
               {digits.map((digit, index) => (
                 <p className="text centered">{digit}</p>
-                  ))}
+                  )
+                )}
           </div>
         </div>
        

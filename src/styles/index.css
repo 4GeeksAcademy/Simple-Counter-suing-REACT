@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(71, 203, 247);
+}
+
+.container {
+    justify-content: center;
+    display: flex;
+    margin-top: 100px;
+}
+
+.numbers {
+    display: flex;
+    font-size: 5rem;
+    background-color: black;
+    color: white;
+    width: 300px;
+    padding:10px;  
+}
+
+.clock{
+    display: flex;
+    font-size: 6rem;
+    background-color: black;
+    color: white;
+    width: 120px;
+    padding:25px;
+    
+}
