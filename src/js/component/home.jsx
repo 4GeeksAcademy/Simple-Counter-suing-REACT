@@ -1,26 +1,30 @@
 import React from "react";
+import { useState, useEffect } from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
-//create your first component
 const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+	const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCount((count) => count + 1);
+    }, 1000);
+  });
+
+  const formattedCount = count.toString().padStart(6, "0");
+  const digits = formattedCount.split("");
+
+  return (
+        <div className="d-flex flex-row m-4 display-1 bg-dark text-white">
+            <i class="fa fa-clock fa-2xl myclock"></i>
+          <div className="d-flex flex-row mb-3 display-1">
+              {digits.map((digit, index) => (
+                <p className="text centered">{digit}</p>
+                  ))}
+          </div>
+        </div>
+       
+    );
 };
 
 export default Home;
